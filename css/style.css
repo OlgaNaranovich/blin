@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "myriad-pro-regular";
+  src: url("../fonts/myriad-pro-regular/myriad-pro-regular.eot");
+  src: url("../fonts/myriad-pro-regular/myriad-pro-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/myriad-pro-regular/myriad-pro-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "myriadprobold";
+  src: url("../fonts/myriadprobold/myriadprobold.eot");
+  src: url("../fonts/myriadprobold/myriadprobold.eot?#iefix") format("embedded-opentype"), url("../fonts/myriadprobold/myriadprobold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "mtcorsva";
+  src: url("../fonts/mtcorsva/mtcorsva.eot");
+  src: url("../fonts/mtcorsva/mtcorsva.eot?#iefix") format("embedded-opentype"), url("../fonts/mtcorsva/mtcorsva.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "cooper-black";
+  src: url("../fonts/cooper-black/cooper-black.eot");
+  src: url("../fonts/cooper-black/cooper-black.eot?#iefix") format("embedded-opentype"), url("../fonts/cooper-black/cooper-black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot");
+  src: url("../fonts/FontAwesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/FontAwesome/fontawesome-webfont.woff") format("woff"), url("../fonts/FontAwesome/fontawesome-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/*Cooper Black Regular */
+/*Myriad Pro Regular */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #73151f;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+li:focus {
+  outline: none;
+}
+
+h1, h2 {
+  padding: 50px 0;
+  font-size: 45px;
+  color: #eeddcc;
+  text-align: center;
+}
+
+body {
+  background-color: #eeddcc;
+  font-family: "myriad-pro-regular", sans-serif;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.section-wood {
+  background-image: url(../img/bg_wood.jpg);
+  background-size: cover;
+}
+
+.header-left {
+  margin: 25px 0;
+}
+.header-left img {
+  width: 80%;
+  max-width: 270px;
+}
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header-right_nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.header-right_nav li {
+  margin: 10px 20px 0;
+}
+.header-right_nav li a {
+  color: #453d3d;
+  font-family: "myriad-pro-regular", sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.header-right_nav li a::after {
+  content: "";
+  display: block;
+  background: #73151f;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.header-right_nav li a:hover {
+  text-decoration: none;
+  color: #73151f;
+}
+.header-right_nav li a:hover::after {
+  transform: scaleX(1);
+}
+.header-right_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header-right_content .circles {
+  display: flex;
+  flex-direction: row;
+}
+.header-right_content .circles .circle {
+  margin: 0 10px;
+  border: 2px solid #73151f;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  font-size: 33.75px;
+  font-family: "cooper-black", sans-serif;
+  font-weight: bold;
+  line-height: 1.9;
+  transition: all 0.2s ease;
+}
+.header-right_content .circles .circle:hover {
+  background-color: #73151f;
+  transform: scale(1.1, 1.1);
+}
+.header-right_content .circles .circle .new {
+  font-size: 21px;
+}
+.header-right_content .circles .circle .new-activ, .header-right_content .circles .circle .discounts-activ, .header-right_content .circles .circle .delivery-activ {
+  display: inline-block;
+  font-size: 16.5px;
+  line-height: 20px;
+  vertical-align: middle;
+  font-family: "myriad-pro-regular", sans-serif;
+  font-weight: normal;
+}
+.header-right_content .circles .circle .new-activ:hover, .header-right_content .circles .circle .discounts-activ:hover, .header-right_content .circles .circle .delivery-activ:hover {
+  text-decoration: none;
+  color: #eeddcc;
+}
+.header-right_content .circles .circle .delivery img {
+  width: 60px;
+  height: auto;
+}
+.header-right_content .tel-top_wrap {
+  font-size: 28.5px;
+  font-weight: bold;
+  color: #73151f;
+  display: flex;
+}
+.header-right_content .tel-top_wrap span {
+  font-size: 22.5px;
+  margin: auto;
+  padding-right: 10px;
+}
+.header-right_content .contact-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-right_content .contact-icon a {
+  margin: auto;
+}
+.header-right_content .contact-icon a .fa {
+  color: #453d3d;
+  transition: all 0.3s ease;
+}
+.header-right_content .contact-icon a .fa:hover {
+  transform: scaleX(-1);
+  color: #73151f;
+}
+.header-right_content .contact-icon a .fa-mobile {
+  font-size: 40px;
+}
+.header-right_content .contact-icon a .fa-envelope {
+  font-size: 25px;
+}
+
+/*MOBILE MENU TOGGLE BUTTON*/
+.toggle-menu {
+  display: none;
+  width: 28px;
+  height: 28px;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+  z-index: 6;
+}
+.toggle-menu span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #453d3d;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.toggle-menu span:after, .toggle-menu span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+.toggle-menu span:after {
+  top: 18px;
+  width: 100%;
+  height: 3px;
+  background-color: #453d3d;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.toggle-menu span:before {
+  width: 100%;
+  height: 3px;
+  background-color: #453d3d;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.toggle-menu.on span {
+  background-color: transparent;
+}
+.toggle-menu.on span:before {
+  transform: rotate(45deg) translate(-1px, 0px);
+  background-color: #eeddcc;
+}
+.toggle-menu.on span:after {
+  transform: rotate(-45deg) translate(6px, -7px);
+  background-color: #eeddcc;
+}
+
+/*MOBILE MENU TOGGLE BUTTON - END*/
+
+/*# sourceMappingURL=style.css.map */
