@@ -1,6 +1,4 @@
-sass/
+css/
 node_modules/
-*.json
 libs/
-*.css.map
 
