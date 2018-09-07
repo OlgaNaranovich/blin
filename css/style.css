@@ -77,6 +77,31 @@ body {
   background-size: cover;
 }
 
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens*/
+/* Medium Devices, Desktops*/
+@media screen and (max-width: 992px) {
+  body .header-right_nav li a {
+    font-size: 1rem;
+  }
+}
+/* Small Devices, Tablets*/
+@media screen and (max-width: 768px) {
+  body .header-right_nav_wrap {
+    display: none;
+  }
+  body .toggle-menu {
+    display: block;
+  }
+}
+/* Extra Small Devices, Phones*/
+/* Custom, iPhone Retina*/
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina*/
+/* Extra Small Devices, Phones*/
+/* Small Devices, Tablets*/
+/* Medium Devices, Desktops*/
+/* Large Devices, Wide Screens*/
 .header-left {
   margin: 25px 0;
 }
@@ -89,20 +114,20 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-.header-right_nav {
+.header-right_nav_ul {
   display: flex;
   justify-content: flex-end;
 }
-.header-right_nav li {
+.header-right_nav_ul li {
   margin: 10px 20px 0;
 }
-.header-right_nav li a {
+.header-right_nav_ul li a {
   color: #453d3d;
   font-family: "myriad-pro-regular", sans-serif;
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
-.header-right_nav li a::after {
+.header-right_nav_ul li a::after {
   content: "";
   display: block;
   background: #73151f;
@@ -111,11 +136,11 @@ body {
   transform: scaleX(0);
   transition: all 0.3s ease;
 }
-.header-right_nav li a:hover {
+.header-right_nav_ul li a:hover {
   text-decoration: none;
   color: #73151f;
 }
-.header-right_nav li a:hover::after {
+.header-right_nav_ul li a:hover::after {
   transform: scaleX(1);
 }
 .header-right_content {
@@ -187,14 +212,14 @@ body {
   transition: all 0.3s ease;
 }
 .header-right_content .contact-icon a .fa:hover {
-  transform: scaleX(-1);
+  transform: translateX(5px);
   color: #73151f;
 }
 .header-right_content .contact-icon a .fa-mobile {
   font-size: 40px;
 }
 .header-right_content .contact-icon a .fa-envelope {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 /*MOBILE MENU TOGGLE BUTTON*/

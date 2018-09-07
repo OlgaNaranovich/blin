@@ -11,7 +11,7 @@
 
 	<body>
 
-		<div class="top-toggle-menu"></div>
+		<a href="#" id="toggle-menu" class="toggle-menu" onclick="toggleMenu()"><span></span></a>
 
 		<header class="header section-wood">
 			<div class="container">
@@ -29,8 +29,8 @@
 
 					<div class="col-md-9">
 						<div class="header-right">
-							<nav>
-								<ul class="header-right_nav">
+							<nav id="header_nav" class="header-right_nav">
+								<ul class="header-right_nav_ul">
 									<li><a href="#">О нас</a></li>
 									<li><a href="#">Партнеры</a></li>
 									<li><a href="#">Отзывы</a></li>
@@ -39,7 +39,6 @@
 								</ul>
 							</nav>
 							
-							<a href="#" class="toggle-menu hidden-lg"><span></span></a>
 							<div class="header-right_content">
 								<div class="circles">
 									<div class="circle" onmouseover="change1();" onmouseout="changeOut1();">
@@ -134,7 +133,7 @@
 			<h2>Блинное меню</h2>
 		</section>
 		
-		<script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script>
+		<!-- <script>document.write('<script src="http://' + (location.host || '${1:localhost}').split(':')[0] + ':${2:35729}/livereload.js?snipver=1"></' + 'script>')</script> -->
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

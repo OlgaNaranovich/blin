@@ -1,6 +1,7 @@
 @import 'vars'
 @import 'fonts'
 @import 'base'
+@import 'media'
 
 .header
 	&-left 
@@ -13,28 +14,29 @@
 		flex-direction: column
 		justify-content: space-around
 		&_nav
-			display: flex
-			justify-content: flex-end
-			li 
-				margin: 10px 20px 0
-				a 
-					color: #453d3d
-					font-family: 'myriad-pro-regular', sans-serif
-					font-size: 1.2rem
-					transition: all .3s ease
-					&::after
-						content: ''
-						display: block
-						background: $red
-						width: 100%
-						height: 1px
-						transform: scaleX(0)
+			&_ul
+				display: flex
+				justify-content: flex-end
+				li 
+					margin: 10px 20px 0
+					a 
+						color: #453d3d
+						font-family: 'myriad-pro-regular', sans-serif
+						font-size: 1.2rem
 						transition: all .3s ease
-					&:hover
-						text-decoration: none
-						color: #73151f
 						&::after
-							transform: scaleX(1)
+							content: ''
+							display: block
+							background: $red
+							width: 100%
+							height: 1px
+							transform: scaleX(0)
+							transition: all .3s ease
+						&:hover
+							text-decoration: none
+							color: #73151f
+							&::after
+								transform: scaleX(1)
 		&_content 
 			display: flex
 			flex-direction: row
@@ -92,18 +94,14 @@
 					.fa 
 						color: $gray
 						transition:	all .3s ease
-						
 						&:hover
-							transform: scaleX(-1)
+							transform: translateX(5px)
 							color: $red
 						&-mobile
 							font-size: 40px
-
-
 						&-envelope
-							font-size: 26px
+							font-size: 28px
 
-					
 
 /*MOBILE MENU TOGGLE BUTTON*/
 

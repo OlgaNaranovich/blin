@@ -34,18 +34,28 @@ function changeOut3() {
 	d.appendChild(img);
 	img.src = 'img/circle-car.png';
 }
-$(document).ready(function(){
-	$('.big-owl-carousel').owlCarousel({
-		items: 1,
-		nav: true,
-		loop: true,
-		smartSpeed:1500,
-		navText: ["<img src='img/big-slider/arrow-red-left.png'>", "<img src='img/big-slider/arrow-red-right.png'>"]
-	});
 
-	$(".toggle-menu").click(function() {
-  $(this).toggleClass("on");
-  $(".header-right_nav").slideToggle();
-  return false;
-	});
-});
+// $(".toggle-menu").click(function() {
+// 	$(this).toggleClass("on");
+// 	$(".header-right_nav_ul").slideToggle();
+// 	return false;
+// 	});
+
+function toggleMenu() {
+	var tm = document.getElementById("toggle-menu");
+	var menu = document.getElementById("header_nav");
+	tm.classList.add("on");
+	menu.classList.add("toggle");
+	menu.style.display = "block";
+}
+
+// $(document).ready(function(){
+// 	$('.big-owl-carousel').owlCarousel({
+// 		items: 1,
+// 		nav: true,
+// 		loop: true,
+// 		smartSpeed:1500,
+// 		navText: ["<img src='img/big-slider/arrow-red-left.png'>", "<img src='img/big-slider/arrow-red-right.png'>"]
+// 	});
+
+// });
