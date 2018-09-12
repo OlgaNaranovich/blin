@@ -44,9 +44,19 @@ function changeOut3() {
 function toggleMenu() {
 	var tm = document.getElementById("toggle-menu");
 	var menu = document.getElementById("header_nav");
-	tm.classList.add("on");
-	menu.classList.add("toggle");
-	menu.style.display = "block";
+	
+	if (!menu.classList.contains("toggle")) {
+		menu.classList.add("toggle");
+	} else		
+		menu.classList.remove("toggle");
+		
+
+	if (!tm.classList.contains("on")) {
+		tm.classList.add("on");
+	} else
+		tm.classList.remove("on");
+		
+	 
 }
 
 // $(document).ready(function(){

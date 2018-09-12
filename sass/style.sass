@@ -1,3 +1,6 @@
+$grid-columns: 12 !default
+$grid-gutter-width: 0 !default
+
 @import 'vars'
 @import 'fonts'
 @import 'base'
@@ -5,15 +8,21 @@
 
 .header
 	&-left 
-		margin: 25px 0
+		height: 100%
+		display: flex
+		justify-content: center
+		text-align: center
+		align-items: center
 		img
-			width: 80%
+			width: 90%
 			max-width: 270px
+			padding: 30px 0
 	&-right
 		display: flex
 		flex-direction: column
 		justify-content: space-around
 		&_nav
+
 			&_ul
 				display: flex
 				justify-content: flex-end
@@ -37,21 +46,49 @@
 							color: #73151f
 							&::after
 								transform: scaleX(1)
+		.toggle
+			display: block
+			position: absolute
+			width: 100vw
+			height: 100vh
+			top: -175px
+			left: 0
+			background-color: $red
+			transition: $trs 
+			ul
+				margin-top: 70px
+				display: block
+				text-align: center
+				li
+					margin: 25px 0
+					padding: 3px 0
+					transition: all .1s ease
+					&:hover
+						background-color: $light
+					a 
+						color: $light
+						display: block
+						transition: all .1s ease
+						&:hover
+							color: $red
+			
 		&_content 
 			display: flex
 			flex-direction: row
-			justify-content: space-around
+			justify-content: flex-end
 			.circles
 				display: flex
 				flex-direction: row
+				margin: 0 30px
 				.circle
 					margin: 0 10px
 					border: 2px solid $red
 					border-radius: 50%
-					width: 75px
-					height: 75px
+					width: 4.6rem
+					height: 4.6rem
+					color: $red
 					text-align: center
-					font-size: 45px*$em
+					font-size: 2.2rem
 					font-family: 'cooper-black', sans-serif
 					font-weight: bold
 					line-height: 1.9
@@ -59,13 +96,15 @@
 					&:hover
 						background-color: $red
 						transform: scale(1.1, 1.1)
-						
 					.new
-						font-size: 28px*$em
+						font-size: 1.3rem
+						color: $red
+					.discounts
+						color: $red
 					.new-activ, .discounts-activ, .delivery-activ
 						display: inline-block
-						font-size: 22px*$em
-						line-height: 20px
+						font-size: .85rem
+						line-height: 1.5
 						vertical-align: middle
 						font-family: 'myriad-pro-regular', sans-serif
 						font-weight: normal
@@ -76,15 +115,17 @@
 						img
 							width: 60px
 							height: auto
-			.tel-top_wrap
-				font-size: 38px*$em
-				font-weight: bold
-				color: $red	
-				display: flex	
-				span
-					font-size: 30px*$em
-					margin: auto
-					padding-right: 10px
+			.tel-top
+				margin: 0 30px
+				.tel-top_wrap
+					font-size: 1.7rem
+					font-weight: bold
+					color: $red	
+					display: flex	
+					span
+						font-size: 1.2rem
+						margin: auto
+						padding-right: 10px
 			.contact-icon
 				display: flex
 				flex-direction: column
@@ -93,7 +134,7 @@
 					margin: auto
 					.fa 
 						color: $gray
-						transition:	all .3s ease
+						transition:	$trs 
 						&:hover
 							transform: translateX(5px)
 							color: $red
@@ -101,6 +142,29 @@
 							font-size: 40px
 						&-envelope
 							font-size: 28px
+		&_form
+			display: flex
+			justify-content: flex-end
+			input
+				min-width: 200px
+				max-height: 30px
+				background-color: $light
+				color: $gray
+				padding-left: 5px
+				margin: 5px 0
+				border: 1px solid #bea18e
+				transition: $trs
+				&::-webkit-input-placeholder
+					font-family: 'myriad-pro-regular', sans-serif
+					color: $red
+				
+				&:hover
+					box-shadow: inset 0 0 5px rgba(170, 145, 130, .6)
+				
+			.button
+				font-size: 18px*$em
+				padding: 5px 10px
+				margin: 5px 0 5px 10px 
 
 
 /*MOBILE MENU TOGGLE BUTTON*/

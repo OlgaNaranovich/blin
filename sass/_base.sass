@@ -1,12 +1,17 @@
+
 * 
 	margin: 0
 	padding: 0
 a 
 	text-decoration: none
-	color: $red
+	color: $light
 	&:hover
 		text-decoration: underline
+		color: $light
 	&:focus
+		outline: none
+input
+	&:focus, &:hover
 		outline: none
 li 
 	list-style-type: none
@@ -23,6 +28,23 @@ body
 	font-family: 'myriad-pro-regular', sans-serif
 	font-size: 10px
 	line-height: 1.4
+	position: relative
+	
 .section-wood 
 	background-image: url(../img/bg_wood.jpg)
 	background-size: cover
+button, .button
+	background-color: $green
+	color: $light
+	font-size: 22px*$em
+	border-radius: 5px
+	border: none
+	border-bottom: 1px solid darken($green, 6%)
+	padding: 10px 20px
+	transition: $trs 
+	&:hover 
+		background-color: lighten($green, 5%)
+	&:focus
+		background-color: darken($green, 5%)
+		outline: none
+
