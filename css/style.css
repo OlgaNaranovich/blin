@@ -45,8 +45,8 @@ a {
   color: #eeddcc;
 }
 a:hover {
-  text-decoration: underline;
-  color: #eeddcc;
+  text-decoration: none;
+  color: #e1c4a6;
 }
 a:focus {
   outline: none;
@@ -64,10 +64,13 @@ li:focus {
 }
 
 h1, h2 {
-  padding: 50px 0;
-  font-size: 45px;
-  color: #eeddcc;
+  padding: 15px 0;
+  font-size: 2.2rem;
   text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 body {
@@ -76,11 +79,21 @@ body {
   font-size: 10px;
   line-height: 1.4;
   position: relative;
+  color: #453d3d;
 }
 
 .section-wood {
   background-image: url(../img/bg_wood.jpg);
   background-size: cover;
+}
+.section-wood h2 {
+  color: #73151f;
+}
+
+.section-red {
+  background-color: #73151f;
+  color: #eeddcc;
+  border-bottom: 1px solid #eeddcc;
 }
 
 button, .button {
@@ -156,6 +169,7 @@ button:focus, .button:focus {
 .header-left {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -163,7 +177,14 @@ button:focus, .button:focus {
 .header-left img {
   width: 90%;
   max-width: 270px;
-  padding: 30px 0;
+  padding: 30px 0 0;
+}
+.header-left h1 {
+  font-size: 1.6rem;
+  font-family: "mtcorsva";
+  padding: 6px 0;
+  margin: 0;
+  color: #73151f;
 }
 .header-right {
   display: flex;
@@ -204,7 +225,7 @@ button:focus, .button:focus {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top: -175px;
+  top: -190px;
   left: 0;
   background-color: #73151f;
   transition: all 0.3s ease;
@@ -216,8 +237,8 @@ button:focus, .button:focus {
 }
 .header-right .toggle ul li {
   margin: 25px 0;
-  padding: 3px 0;
-  transition: all 0.1s ease;
+  padding: 2px 0;
+  transition: all 0.3s ease;
 }
 .header-right .toggle ul li:hover {
   background-color: #eeddcc;
@@ -339,7 +360,7 @@ button:focus, .button:focus {
   box-shadow: inset 0 0 5px rgba(170, 145, 130, 0.6);
 }
 .header-right_form .button {
-  font-size: 13.5px;
+  font-size: 0.8rem;
   padding: 5px 10px;
   margin: 5px 0 5px 10px;
 }
@@ -400,5 +421,103 @@ button:focus, .button:focus {
 }
 
 /*MOBILE MENU TOGGLE BUTTON - END*/
+/* TOP-MENU */ 
+.top-menu {
+  height: 69px;
+  background-image: url(../img/bg_top_menu.png);
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.top-menu ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+.top-menu ul li a {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+.top-menu ul li a::after {
+  content: "";
+  display: block;
+  background: #e1c4a6;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+.top-menu ul li a:hover {
+  text-decoration: none;
+}
+.top-menu ul li a:hover::after {
+  transform: scaleX(1);
+}
+.top-menu ul .after {
+  width: 1px;
+  height: 20px;
+  background-color: #eeddcc;
+  align-self: center;
+}
+
+/* BIG-SLIDER */
+.big-slader .h2 {
+  color: #eeddcc;
+  transition: all 0.3s ease;
+}
+.big-slader .h2:hover {
+  color: #dfbe9e;
+}
+
+.carousel-it {
+  display: flex;
+  justify-content: space-around;
+}
+.carousel-it_content {
+  width: 25%;
+  height: 400px;
+  background-color: rgba(238, 221, 204, 0.2);
+  padding: 5px;
+}
+.carousel-it_content .text-wrap {
+  border: 1px solid rgba(238, 221, 204, 0.2);
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.carousel-it_content .text-wrap p {
+  font-size: 0.8rem;
+}
+.carousel-it_content .text-wrap strong {
+  font-size: 1rem;
+}
+.carousel-it_content .text-wrap span {
+  font-family: "mtcorsva";
+  font-size: 1.3rem;
+  color: rgba(238, 221, 204, 0.8);
+}
+.carousel-it_img {
+  width: 45%;
+  height: auto;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  position: absolute;
+  top: 100px;
+  transform: translateY(50%);
+}
+.owl-nav .owl-prev img, .owl-nav .owl-next img {
+  width: 40px;
+}
+.owl-nav .owl-next {
+  right: 0;
+}
 
 /*# sourceMappingURL=style.css.map */

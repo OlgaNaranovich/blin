@@ -59,13 +59,12 @@ function toggleMenu() {
 	 
 }
 
-// $(document).ready(function(){
-// 	$('.big-owl-carousel').owlCarousel({
-// 		items: 1,
-// 		nav: true,
-// 		loop: true,
-// 		smartSpeed:1500,
-// 		navText: ["<img src='img/big-slider/arrow-red-left.png'>", "<img src='img/big-slider/arrow-red-right.png'>"]
-// 	});
-
-// });
+$(document).ready(function(){
+	$('.big-owl-carousel').owlCarousel({
+		items: 1,
+		nav: true,
+		loop: true,
+		smartSpeed:1500,
+		navText: ["<img src='img/big-slider/arrow-red-left.png'>", "<img src='img/big-slider/arrow-red-right.png'>"]
+	});
+});

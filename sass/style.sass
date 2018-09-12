@@ -10,13 +10,20 @@ $grid-gutter-width: 0 !default
 	&-left 
 		height: 100%
 		display: flex
+		flex-direction: column
 		justify-content: center
 		text-align: center
 		align-items: center
 		img
 			width: 90%
 			max-width: 270px
-			padding: 30px 0
+			padding: 30px 0 0
+		h1
+			font-size: 1.6rem
+			font-family: "mtcorsva"
+			padding: 6px 0
+			margin: 0
+			color: $red
 	&-right
 		display: flex
 		flex-direction: column
@@ -51,7 +58,7 @@ $grid-gutter-width: 0 !default
 			position: absolute
 			width: 100vw
 			height: 100vh
-			top: -175px
+			top: -190px
 			left: 0
 			background-color: $red
 			transition: $trs 
@@ -61,8 +68,8 @@ $grid-gutter-width: 0 !default
 				text-align: center
 				li
 					margin: 25px 0
-					padding: 3px 0
-					transition: all .1s ease
+					padding: 2px 0
+					transition: $trs 
 					&:hover
 						background-color: $light
 					a 
@@ -162,7 +169,7 @@ $grid-gutter-width: 0 !default
 					box-shadow: inset 0 0 5px rgba(170, 145, 130, .6)
 				
 			.button
-				font-size: 18px*$em
+				font-size: .8rem
 				padding: 5px 10px
 				margin: 5px 0 5px 10px 
 
@@ -216,3 +223,86 @@ $grid-gutter-width: 0 !default
 			background-color: #eeddcc
 
 /*MOBILE MENU TOGGLE BUTTON - END*/
+
+/* TOP-MENU */ 
+
+.top-menu
+	height: 69px
+	background-image: url(../img/bg_top_menu.png)
+	background-repeat: repeat-x
+	display: flex
+	justify-content: space-around
+	align-items: center
+	ul
+		width: 100%
+		display: flex
+		justify-content: space-around
+		margin: 0
+		li 
+			a
+				font-size: 1.2rem
+				transition: $trs 
+				&::after
+					content: ''
+					display: block
+					background: darken($light, 10%)
+					width: 100%
+					height: 1px
+					transform: scaleX(0)
+					transition: all .3s ease
+				&:hover
+					text-decoration: none
+					&::after
+						transform: scaleX(1)
+		.after
+			width: 1px
+			height: 20px
+			background-color: $light	
+			align-self: center			
+
+/* BIG-SLIDER */
+.big-slader
+	.h2
+		color: $light
+		transition: all .3s ease
+		&:hover
+			color: darken($light, 12%)
+.carousel-it
+	display: flex
+	justify-content: space-around
+	&_content
+		width: 25%
+		height: 400px
+		background-color: rgba($light, .2)
+		padding: 5px
+		.text-wrap
+			border: 1px solid rgba($light, .2)
+			border-radius: 2px
+			width: 100%
+			height: 100%
+			padding: 10px
+			text-align: center
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			p 
+				font-size: .8rem
+			strong
+				font-size: 1rem
+			span
+				font-family: "mtcorsva"
+				font-size: 1.3rem
+				color: rgba($light, .8)
+	&_img
+		width: 45%
+		height: auto
+.owl-nav
+	.owl-prev, .owl-next				
+		position: absolute
+		top: 100px
+		transform: translateY(50%)
+		img
+			width: 40px
+	.owl-next
+		right: 0
+	
