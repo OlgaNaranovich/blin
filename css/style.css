@@ -76,7 +76,7 @@ h3 {
 body {
   background-color: #eeddcc;
   font-family: "myriad-pro-regular", sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.4;
   position: relative;
   color: #453d3d;
@@ -116,33 +116,65 @@ button:focus, .button:focus {
 
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens*/
+@media screen and (max-width: 1100px) {
+  body .header-right_nav li {
+    margin: 10px 20px 0;
+  }
+  body .header-right_content .circles {
+    margin: 0;
+  }
+}
 /* Medium Devices, Desktops*/
 @media screen and (max-width: 992px) {
+  body .header-left h1 {
+    font-size: 1.6rem;
+  }
+  body .header-right_nav li {
+    margin: 10px 15px 0;
+  }
   body .header-right_nav li a {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .header-right_content .circles {
     margin: 0;
   }
   body .header-right_content .circles .circle {
-    width: 4.3rem;
-    height: 4.3rem;
-    font-size: 2.2rem;
-    line-height: 1.8;
+    width: 5.5rem;
+    height: 5.5rem;
+    font-size: 3.2rem;
+    line-height: 1.45;
+  }
+  body .header-right_content .circles .circle .new {
+    font-size: 1.8rem;
+  }
+  body .header-right_content .circles .circle .new-active {
+    font-size: 1.2rem;
+  }
+  body .header-right_content .circles .circle .delivery img {
+    width: 70px;
   }
   body .header-right_content .circles .circle .delivery-activ {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   body .header-right_content .tel-top {
-    margin: 0 15px;
+    margin: 0 10px;
+  }
+  body .header-right_content .tel-top .tel-top_wrap {
+    font-size: 1.8rem;
+  }
+  body .header-right_content .tel-top .tel-top_wrap span {
+    font-size: 1.2rem;
+  }
+  body .header-right_content .contact-icon {
+    display: none;
   }
 }
 /* Small Devices, Tablets*/
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   body .header-right_nav {
     display: none;
   }
-  body .toggle-menu {
+  body .toggle-nav {
     display: block;
   }
   body .header-right_content {
@@ -151,11 +183,26 @@ button:focus, .button:focus {
   body .header-right_content .circles, body .header-right_content .tel-top {
     margin: auto;
   }
-  body .header-right_content .contact-icon {
-    display: none;
+  body .header-right_content .circles .circle {
+    width: 5rem;
+    height: 5rem;
   }
   body .header-right_form {
+    justify-content: center;
     margin: auto;
+    width: 200px;
+  }
+  body .top-menu li img.img {
+    display: block;
+  }
+  body .top-menu li p {
+    display: none;
+  }
+  body .top-menu li:last-child {
+    display: none;
+  }
+  body .top-menu .drink {
+    display: none;
   }
 }
 /* Extra Small Devices, Phones*/
@@ -175,13 +222,13 @@ button:focus, .button:focus {
   align-items: center;
 }
 .header-left img {
-  width: 90%;
+  width: 100%;
   max-width: 270px;
   padding: 30px 0 0;
 }
 .header-left h1 {
-  font-size: 1.6rem;
-  font-family: "mtcorsva";
+  font-size: 2rem;
+  font-family: "mtcorsva", sans-serif;
   padding: 6px 0;
   margin: 0;
   color: #73151f;
@@ -189,19 +236,18 @@ button:focus, .button:focus {
 .header-right {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 .header-right_nav_ul {
   display: flex;
   justify-content: flex-end;
 }
 .header-right_nav_ul li {
-  margin: 10px 20px 0;
+  margin: 10px 30px 0;
 }
 .header-right_nav_ul li a {
   color: #453d3d;
   font-family: "myriad-pro-regular", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: all 0.3s ease;
 }
 .header-right_nav_ul li a::after {
@@ -222,16 +268,16 @@ button:focus, .button:focus {
 }
 .header-right .toggle {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  top: -190px;
+  top: 0;
   left: 0;
   background-color: #73151f;
   transition: all 0.3s ease;
 }
 .header-right .toggle ul {
-  margin-top: 70px;
+  margin-top: 50px;
   display: block;
   text-align: center;
 }
@@ -265,11 +311,11 @@ button:focus, .button:focus {
   margin: 0 10px;
   border: 2px solid #73151f;
   border-radius: 50%;
-  width: 4.6rem;
-  height: 4.6rem;
+  width: 6.5rem;
+  height: 6.5rem;
   color: #73151f;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   font-family: "cooper-black", sans-serif;
   font-weight: bold;
   line-height: 1.9;
@@ -280,39 +326,39 @@ button:focus, .button:focus {
   transform: scale(1.1, 1.1);
 }
 .header-right_content .circles .circle .new {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: #73151f;
 }
 .header-right_content .circles .circle .discounts {
   color: #73151f;
 }
-.header-right_content .circles .circle .new-activ, .header-right_content .circles .circle .discounts-activ, .header-right_content .circles .circle .delivery-activ {
+.header-right_content .circles .circle .new-active, .header-right_content .circles .circle .discounts-active, .header-right_content .circles .circle .delivery-active {
   display: inline-block;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 1.15rem;
+  line-height: 1.3;
   vertical-align: middle;
   font-family: "myriad-pro-regular", sans-serif;
   font-weight: normal;
 }
-.header-right_content .circles .circle .new-activ:hover, .header-right_content .circles .circle .discounts-activ:hover, .header-right_content .circles .circle .delivery-activ:hover {
+.header-right_content .circles .circle .new-active:hover, .header-right_content .circles .circle .discounts-active:hover, .header-right_content .circles .circle .delivery-active:hover {
   text-decoration: none;
   color: #eeddcc;
 }
 .header-right_content .circles .circle .delivery img {
-  width: 60px;
+  width: 85px;
   height: auto;
 }
 .header-right_content .tel-top {
   margin: 0 30px;
 }
 .header-right_content .tel-top .tel-top_wrap {
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #73151f;
   display: flex;
 }
 .header-right_content .tel-top .tel-top_wrap span {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: auto;
   padding-right: 10px;
 }
@@ -333,22 +379,23 @@ button:focus, .button:focus {
   color: #73151f;
 }
 .header-right_content .contact-icon a .fa-mobile {
-  font-size: 40px;
+  font-size: 60px;
 }
 .header-right_content .contact-icon a .fa-envelope {
-  font-size: 28px;
+  font-size: 38px;
 }
 .header-right_form {
   display: flex;
   justify-content: flex-end;
+  margin: 10px 0;
 }
 .header-right_form input {
   min-width: 200px;
-  max-height: 30px;
+  max-height: 40px;
   background-color: #eeddcc;
   color: #453d3d;
   padding-left: 5px;
-  margin: 5px 0;
+  margin: 4px 0;
   border: 1px solid #bea18e;
   transition: all 0.3s ease;
 }
@@ -360,13 +407,13 @@ button:focus, .button:focus {
   box-shadow: inset 0 0 5px rgba(170, 145, 130, 0.6);
 }
 .header-right_form .button {
-  font-size: 0.8rem;
-  padding: 5px 10px;
+  font-size: 1rem;
+  padding: 8px 18px;
   margin: 5px 0 5px 10px;
 }
 
 /*MOBILE MENU TOGGLE BUTTON*/
-.toggle-menu {
+.toggle-nav {
   display: none;
   width: 28px;
   height: 28px;
@@ -375,7 +422,7 @@ button:focus, .button:focus {
   position: absolute;
   z-index: 6;
 }
-.toggle-menu span {
+.toggle-nav span {
   position: relative;
   display: block;
   width: 100%;
@@ -385,13 +432,13 @@ button:focus, .button:focus {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-.toggle-menu span:after, .toggle-menu span:before {
+.toggle-nav span:after, .toggle-nav span:before {
   content: "";
   position: absolute;
   left: 0;
   top: 9px;
 }
-.toggle-menu span:after {
+.toggle-nav span:after {
   top: 18px;
   width: 100%;
   height: 3px;
@@ -400,7 +447,7 @@ button:focus, .button:focus {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-.toggle-menu span:before {
+.toggle-nav span:before {
   width: 100%;
   height: 3px;
   background-color: #453d3d;
@@ -408,14 +455,14 @@ button:focus, .button:focus {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-.toggle-menu.on span {
+.toggle-nav.on span {
   background-color: transparent;
 }
-.toggle-menu.on span:before {
+.toggle-nav.on span:before {
   transform: rotate(45deg) translate(-1px, 0px);
   background-color: #eeddcc;
 }
-.toggle-menu.on span:after {
+.toggle-nav.on span:after {
   transform: rotate(-45deg) translate(6px, -7px);
   background-color: #eeddcc;
 }
@@ -427,7 +474,6 @@ button:focus, .button:focus {
   background-image: url(../img/bg_top_menu.png);
   background-repeat: repeat-x;
   display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 .top-menu ul {
@@ -436,11 +482,18 @@ button:focus, .button:focus {
   justify-content: space-around;
   margin: 0;
 }
-.top-menu ul li a {
+.top-menu ul li a img {
+  width: 40px;
+  height: 30px;
+  display: none;
+}
+.top-menu ul li a p {
+  margin: 0;
+  padding: 0;
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
-.top-menu ul li a::after {
+.top-menu ul li a p::after {
   content: "";
   display: block;
   background: #e1c4a6;
@@ -449,10 +502,10 @@ button:focus, .button:focus {
   transform: scaleX(0);
   transition: all 0.3s ease;
 }
-.top-menu ul li a:hover {
+.top-menu ul li a p:hover {
   text-decoration: none;
 }
-.top-menu ul li a:hover::after {
+.top-menu ul li a p:hover::after {
   transform: scaleX(1);
 }
 .top-menu ul .after {
@@ -493,13 +546,13 @@ button:focus, .button:focus {
   justify-content: space-around;
 }
 .carousel-it_content .text-wrap p {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .carousel-it_content .text-wrap strong {
   font-size: 1rem;
 }
 .carousel-it_content .text-wrap span {
-  font-family: "mtcorsva";
+  font-family: "mtcorsva", sans-serif;
   font-size: 1.3rem;
   color: rgba(238, 221, 204, 0.8);
 }

@@ -17,7 +17,7 @@
   A simple primary alert—check it out!
 </div> -->
 
-		<a href="#" id="toggle-menu" class="toggle-menu" onclick="toggleMenu()"><span></span></a>
+		<a href="#" id="toggle-nav" class="toggle-nav" onclick="toggleMenu()"><span></span></a>
 
 		<header class="header section-wood">
 			<div class="container-fluid">
@@ -56,8 +56,8 @@
 								</div>
 						
 								<div class="tel-top">
-									<div class="tel-top_wrap"><span>+375(44) </span>589-34-18</div>
-									<div class="tel-top_wrap"><span>+375(33) </span>589-34-19</div>
+									<a href="tel:+375(0000000)" class="tel-top_wrap"><span>+375(44) </span>589-34-18</a>
+									<a href="tel:+375(0000000)" class="tel-top_wrap"><span>+375(33) </span>589-34-19</a>
 								</div>
 						
 								<div class="contact-icon">
@@ -76,22 +76,24 @@
 				</div> <!-- END ROW -->
 			</div> / <!-- END CONTAINER -->
 		</header>
-
-		<div class="top-menu">
+		
+		<!-- <section class="toggle-top-menu"></section> -->
+		<section class="top-menu">
+			<!-- <img class="top-menu_arrow"src="img/arrow-gray-bottom.png" alt="menu"> -->
 			<ul>
-				<li><a href="#">Блинное меню</a></li>
-				<li class="after"></li>
-				<li><a href="#">Салаты</a></li>
-				<li class="after"></li>
-				<li><a href="#">Десерты</a></li>
-				<li class="after"></li>
-				<li><a href="#">Соусы</a></li>
-				<li class="after"></li>
-				<li><a href="#">Напитки</a></li>
-				<li class="after"></li>
-				<li><a href="#">Доставка</a></li>
+				<li><a href="#"><img class="img" src="img/icons/_pancake.png" alt="pancake"><p>Блинное меню</p></a></li>
+				<li class="after pancake"></li>
+				<li><a href="#"><img class="img" src="img/icons/_salad.png" alt="salad"><p>Салаты</p></a></li>
+				<li class="after salad"></li>
+				<li><a href="#"><img class="img" src="img/icons/_desert.png" alt="desert"><p>Десерты</p></a></li>
+				<li class="after desert"></li>
+				<li><a href="#"><img class="img" src="img/icons/_sause.png" alt="sause"><p>Соусы</p></a></li>
+				<li class="after sause"></li>
+				<li><a href="#""><img class="img" src="img/icons/_drink.png" alt="drink"><p>Напитки</p></a></li>
+				<li class="after drink"></li>
+				<li><a href="#" class="deliv"><p>Доставка</p></a></li>
 			</ul>
-		</div>
+		</section>
 
 		<!--SLADER-->
 		<section class="big-slider section-red">
